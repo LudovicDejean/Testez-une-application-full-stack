@@ -52,6 +52,7 @@ Look at the test coverages:
 ```bash
 Testez-une-application-full-stack\back\target\site\jacoco
 ```
+![alt text](https://raw.githubusercontent.com/LudovicDejean/Testez-une-application-full-stack/refs/heads/main/ressources/readme/back_coverage.png)
 
 ### Front-end
 Before running the front-end end-to-end tests ensure the application is running:
@@ -62,12 +63,19 @@ Run the front-end tests:
 ```bash
 npm run cypress:run
 ```
-Look at the end-to-end test coverage:
-```bash
-npm run e2e:coverage
-```
 
 Run the front-end unit tests:
 ```bash
 npm run test
+```
+
+Look at the front-end test coverage:
+```bash
+npm run test -- --coverage
+```
+![alt text](https://raw.githubusercontent.com/LudovicDejean/Testez-une-application-full-stack/refs/heads/main/ressources/readme/front_coverage.png)
+
+Look at the end-to-end test coverage:
+```bash
+npm run e2e:coverage
 ```

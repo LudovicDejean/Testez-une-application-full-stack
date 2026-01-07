@@ -50,7 +50,7 @@ mvn clean test
 ```
 Look at the test coverages: 
 ```bash
-xdg-open target/site/jacoco/index.html
+Testez-une-application-full-stack\back\target\site\jacoco
 ```
 
 ### Front-end

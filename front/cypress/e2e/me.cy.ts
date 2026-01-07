@@ -1,20 +1,18 @@
 describe('Me Spec', () => {
   it('Me', () => {
     cy.login("test@test.com", "test!1234")
-    cy.intercept(
-      {
-        method: 'GET',
-        url: '/api/user/2',
+    cy.intercept('GET', '/api/user/2', {
+      statusCode: 200,
+      body: {
+        id: 2,
+        email: "test@test.com",
+        lastName: "Test",
+        firstName: "Test",
+        admin: false,
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
       },
-      [ {
-        "id": "1",
-        "email": "test@test.com",
-        "lastName": "Test",
-        "firstName": "Test",
-        "admin": false,
-        "createdAt": new Date(),
-        "updatedAt": new Date()
-      }]).as('user')
+    }).as('user');
     cy.get('[routerlink="me"]').click();
     cy.wait('@user');
     cy.contains("User information")

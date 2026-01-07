@@ -79,3 +79,4 @@ Look at the end-to-end test coverage:
 ```bash
 npm run e2e:coverage
 ```
+![alt text](https://raw.githubusercontent.com/LudovicDejean/Testez-une-application-full-stack/refs/heads/main/ressources/readme/e2e_coverage.png)
